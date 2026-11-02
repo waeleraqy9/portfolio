@@ -168,6 +168,24 @@ button, input, select, textarea {
   color: var(--text-main);
 }
 
+.top-contact-whatsapp {
+  color: #25d366 !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px 6px;
+  border-radius: var(--radius-sm);
+  background: rgba(37, 211, 102, 0.1);
+  border: 1px solid rgba(37, 211, 102, 0.25);
+  transition: all var(--transition-fast);
+}
+.top-contact-whatsapp:hover {
+  background: #25d366 !important;
+  color: #fff !important;
+  border-color: #25d366 !important;
+  box-shadow: 0 0 10px rgba(37, 211, 102, 0.35);
+}
+
 .lang-switch-btn {
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid var(--border-color);
