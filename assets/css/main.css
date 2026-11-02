@@ -218,6 +218,7 @@ button, input, select, textarea {
 
 .brand-logo {
   height: 44px;
+  max-height: 48px;
   width: auto;
   max-width: 160px;
   object-fit: contain;
@@ -407,62 +408,183 @@ button, input, select, textarea {
 
 .hamburger-btn {
   display: none;
-  background: transparent;
-  border: none;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
   color: var(--text-main);
   cursor: pointer;
-  padding: 0.5rem;
+  padding: 8px 10px;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.hamburger-box {
+  width: 22px;
+  height: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.hamburger-line {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--text-main);
+  border-radius: 2px;
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s ease, background-color 0.2s ease;
+}
+
+.hamburger-btn:hover .hamburger-line,
+.hamburger-btn.active .hamburger-line {
+  background-color: var(--accent-primary-hover);
+}
+
+.hamburger-btn.active .hamburger-line:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger-btn.active .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-btn.active .hamburger-line:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
 }
 
 /* Mobile Drawer */
 .mobile-nav {
   display: none;
   position: fixed;
-  inset: 0;
-  top: calc(var(--header-height) + var(--topbar-height));
-  background: var(--bg-surface);
-  z-index: 49;
-  padding: 1.5rem;
+  inset-inline: 0;
+  top: var(--header-height);
+  bottom: 0;
+  height: calc(100vh - var(--header-height));
+  background: #0b0f19; /* Solid theme-matching background */
+  z-index: 9999; /* Higher than everything */
+  padding: 1.5rem 1.25rem 2rem;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   border-top: 1px solid var(--border-color);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.95);
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .mobile-nav.open {
-  display: block;
+  display: flex;
 }
 
 .mobile-nav-list {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 0.5rem;
 }
 
 .mobile-nav-item {
   border-bottom: 1px solid var(--border-subtle);
-  padding-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
 }
 
 .mobile-nav-link {
-  font-size: 1.125rem;
+  font-size: 1.05rem;
   font-weight: 600;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 0;
+  padding: 0.65rem 0.5rem;
+  border-radius: var(--radius-sm);
+  color: var(--text-main);
+  min-height: 44px;
+}
+
+.mobile-nav-link:hover, .mobile-nav-link.active {
+  color: var(--accent-primary-hover);
+  background: rgba(14, 165, 233, 0.08);
 }
 
 .mobile-sub-list {
   list-style: none;
-  padding: 0.5rem 1rem;
+  padding: 0.25rem 0.75rem 0.5rem;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.35rem;
 }
 
 .mobile-sub-link {
-  font-size: 0.9375rem;
+  font-size: 0.9rem;
   color: var(--text-muted);
+  display: block;
+  padding: 0.5rem 0.65rem;
+  border-radius: var(--radius-sm);
+  min-height: 40px;
+  line-height: 1.4;
+}
+
+.mobile-sub-link:hover {
+  color: var(--text-main);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+/* Mobile Drawer Contact & Actions */
+.mobile-drawer-contact {
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.mobile-contact-title {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.mobile-contact-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.mobile-contact-circle {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: all var(--transition-fast);
+}
+
+.mobile-contact-circle.btn-whatsapp {
+  background: rgba(37, 211, 102, 0.12);
+  border-color: rgba(37, 211, 102, 0.3);
+  color: #25d366;
+}
+
+.mobile-contact-circle:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--accent-primary);
+}
+
+.mobile-contact-circle.btn-whatsapp:hover {
+  background: #25d366;
+  color: #fff;
 }
 
 /* Buttons System */
@@ -761,21 +883,37 @@ button, input, select, textarea {
   line-height: 1.65;
 }
 
-.chips-list {
+.chips-list,
+.skills-chips-wrap {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 8px;
   margin-top: auto;
   padding-top: 0.5rem;
+  align-items: center;
 }
 
-.chip {
+.chip,
+.skill-badge {
+  display: inline-flex;
+  align-items: center;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-full);
-  padding: 0.25rem 0.75rem;
+  padding: 4px 10px;
   font-size: 0.8125rem;
+  font-weight: 500;
   color: var(--text-muted);
+  white-space: nowrap;
+  line-height: 1.4;
+  transition: all var(--transition-fast);
+}
+
+.chip:hover,
+.skill-badge:hover {
+  background: rgba(14, 165, 233, 0.1);
+  border-color: var(--accent-primary);
+  color: var(--accent-primary-hover);
 }
 
 /* 4 Pillars Preview Grid */
@@ -1967,23 +2105,207 @@ button, input, select, textarea {
 }
 
 @media (max-width: 768px) {
-  .nav-menu, .nav-actions .btn-cv {
-    display: none;
+  /* Mobile Header & Navigation Repair */
+  .nav-container {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+    flex-direction: row !important;
+    gap: 0.75rem !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
   }
+
+  /* In RTL: Logo on LEFT, Hamburger on RIGHT */
+  [dir="rtl"] .nav-container {
+    flex-direction: row-reverse !important;
+  }
+
+  .nav-menu {
+    display: none !important;
+  }
+
+  /* Prevent collision: hide WhatsApp, Email, CV buttons from header line */
+  .nav-actions .btn-whatsapp,
+  .nav-actions .btn-icon,
+  .nav-actions .btn-cv {
+    display: none !important;
+  }
+
   .hamburger-btn {
-    display: block;
+    display: flex !important;
+  }
+
+  .brand {
+    max-width: calc(100% - 60px);
+  }
+
+  .brand-logo {
+    height: 40px !important;
+    max-height: 44px !important;
+    width: auto !important;
+  }
+
+  .brand-title {
+    max-width: 170px !important;
+    font-size: 0.7rem !important;
+  }
+
+  /* Compact Announcement Bar */
+  .announcement-bar {
+    padding: 0.4rem 0;
   }
   .announcement-inner {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
+    gap: 0.4rem;
+  }
+  .announcement-left {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
   }
   .announcement-right {
     width: 100%;
     justify-content: space-between;
   }
+
   .hero-title {
     font-size: 1.875rem;
   }
+
+  /* 2x2 Clean Grid for Metrics & KPIs (Scroll Reduction) */
+  .kpi-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.75rem !important;
+  }
+  .kpi-card {
+    padding: 0.9rem 0.85rem !important;
+    gap: 0.5rem !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+  .kpi-icon-wrap {
+    width: 34px !important;
+    height: 34px !important;
+  }
+  .kpi-icon-wrap svg {
+    width: 18px !important;
+    height: 18px !important;
+  }
+  .kpi-val {
+    font-size: 1.45rem !important;
+    font-weight: 800 !important;
+    line-height: 1.1 !important;
+  }
+  .kpi-label {
+    font-size: 0.75rem !important;
+    line-height: 1.35 !important;
+  }
+
+  /* Projects & Case Studies Sleek Horizontal Swipe Container */
+  .projects-grid,
+  .case-studies-grid {
+    display: flex !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory !important;
+    -webkit-overflow-scrolling: touch !important;
+    gap: 1rem !important;
+    padding-bottom: 1rem !important;
+    padding-top: 0.25rem !important;
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent-primary) rgba(255, 255, 255, 0.05);
+  }
+  .projects-grid::-webkit-scrollbar,
+  .case-studies-grid::-webkit-scrollbar {
+    height: 5px;
+  }
+  .projects-grid::-webkit-scrollbar-thumb,
+  .case-studies-grid::-webkit-scrollbar-thumb {
+    background: var(--accent-primary);
+    border-radius: 999px;
+  }
+  .projects-grid::-webkit-scrollbar-track,
+  .case-studies-grid::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+  }
+  .projects-grid .project-card,
+  .case-studies-grid .case-study-card {
+    flex: 0 0 84% !important;
+    max-width: 320px !important;
+    min-width: 260px !important;
+    scroll-snap-align: start !important;
+    scroll-snap-stop: normal !important;
+  }
+  .project-thumb-wrap {
+    height: 155px !important;
+  }
+  .project-body {
+    padding: 1rem !important;
+  }
+  .project-title {
+    font-size: 1.05rem !important;
+  }
+  .project-summary {
+    font-size: 0.8125rem !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+  }
+
+  /* Skills & Technical Tools Grid */
+  .tools-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.75rem !important;
+  }
+  .tool-card {
+    padding: 0.85rem 1rem !important;
+  }
+  .tool-name {
+    font-size: 0.95rem !important;
+  }
+  .tool-desc {
+    font-size: 0.75rem !important;
+  }
+
+  /* Certifications 2-Column Responsive Grid on Mobile */
+  .certs-gallery-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.75rem !important;
+  }
+  .cert-info {
+    padding: 0.75rem 0.65rem !important;
+    gap: 0.4rem !important;
+  }
+  .cert-title {
+    font-size: 0.825rem !important;
+    line-height: 1.3 !important;
+  }
+  .cert-issuer {
+    font-size: 0.7rem !important;
+    gap: 0.25rem !important;
+  }
+  .cert-meta-row {
+    font-size: 0.65rem !important;
+    padding-top: 0.35rem !important;
+    flex-wrap: wrap !important;
+    gap: 0.25rem !important;
+  }
+  .cert-meta-id {
+    font-size: 0.65rem !important;
+    padding: 0.1rem 0.35rem !important;
+  }
+  .cert-action-btn {
+    padding: 0.4rem 0.5rem !important;
+    font-size: 0.75rem !important;
+  }
+  .cert-issuer-badge {
+    padding: 0.15rem 0.45rem !important;
+    font-size: 0.65rem !important;
+  }
+
   .about-grid, .tracks-grid {
     grid-template-columns: 1fr;
   }
@@ -1991,12 +2313,6 @@ button, input, select, textarea {
     grid-template-columns: 1fr;
   }
   .cycle-grid {
-    grid-template-columns: 1fr;
-  }
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-  .tools-grid {
     grid-template-columns: 1fr;
   }
   .flow-diagram {
@@ -2008,18 +2324,16 @@ button, input, select, textarea {
   .contact-page-grid {
     grid-template-columns: 1fr;
   }
-  .gallery-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .certs-gallery-grid {
+  .gallery-grid:not(.certs-gallery-grid) {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 640px) {
+  /* Maintain 2-column certificates grid (never collapse to 1 column) */
   .certs-gallery-grid {
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.6rem !important;
   }
   .certs-showcase-header {
     flex-direction: column;
@@ -2028,16 +2342,44 @@ button, input, select, textarea {
 }
 
 @media (max-width: 480px) {
+  /* Maintain 2x2 grid for KPIs (never collapse to 1 column) */
   .kpi-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.5rem !important;
   }
+  .kpi-card {
+    padding: 0.75rem 0.65rem !important;
+  }
+  .kpi-val {
+    font-size: 1.3rem !important;
+  }
+  .kpi-label {
+    font-size: 0.6875rem !important;
+  }
+
+  /* Maintain 2-column certificates grid on smallest screens */
+  .certs-gallery-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.5rem !important;
+  }
+  .cert-info {
+    padding: 0.6rem 0.5rem !important;
+  }
+  .cert-title {
+    font-size: 0.75rem !important;
+  }
+  .cert-action-btn span {
+    font-size: 0.7rem !important;
+  }
+
   .contact-tiles-2x2 {
     grid-template-columns: 1fr;
   }
   .brand-title {
-    max-width: 170px;
+    max-width: 140px !important;
   }
   .brand-logo {
-    height: 38px;
+    height: 38px !important;
+    max-height: 40px !important;
   }
 }

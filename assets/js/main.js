@@ -21,17 +21,38 @@ function initMobileNav() {
   const mobileNav = document.querySelector('.mobile-nav');
 
   if (hamburger && mobileNav) {
-    hamburger.addEventListener('click', () => {
-      const isOpen = mobileNav.classList.toggle('open');
-      hamburger.setAttribute('aria-expanded', isOpen);
+    function toggleNav(forceState) {
+      const shouldOpen = typeof forceState === 'boolean' ? forceState : !mobileNav.classList.contains('open');
+      mobileNav.classList.toggle('open', shouldOpen);
+      hamburger.classList.toggle('active', shouldOpen);
+      hamburger.setAttribute('aria-expanded', shouldOpen.toString());
+      document.body.style.overflow = shouldOpen ? 'hidden' : '';
+    }
+
+    hamburger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      toggleNav();
     });
 
     // Close mobile nav when clicking outside
     document.addEventListener('click', (e) => {
       if (!mobileNav.contains(e.target) && !hamburger.contains(e.target) && mobileNav.classList.contains('open')) {
-        mobileNav.classList.remove('open');
-        hamburger.setAttribute('aria-expanded', 'false');
+        toggleNav(false);
       }
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && mobileNav.classList.contains('open')) {
+        toggleNav(false);
+      }
+    });
+
+    // Close when clicking any link inside mobile-nav
+    mobileNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        toggleNav(false);
+      });
     });
   }
 }
@@ -326,14 +347,12 @@ function initLightbox() {
   // Attach click listener to cert cards & action buttons to trigger lightbox
   document.querySelectorAll('.cert-card').forEach(card => {
     const thumb = card.querySelector('.gallery-item');
-    const actionBtn = card.querySelector('.cert-action-btn');
-    if (actionBtn && thumb) {
-      actionBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        thumb.click();
-      });
-    }
+    card.style.cursor = 'pointer';
+    card.addEventListener('click', (e) => {
+      if (e.target.closest('.gallery-item') === thumb) return;
+      e.preventDefault();
+      thumb?.click();
+    });
   });
 }
 

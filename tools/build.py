@@ -8,6 +8,7 @@ import os
 import sys
 import json
 import glob
+import re
 import shutil
 from pathlib import Path
 from PIL import Image, ImageOps
@@ -441,6 +442,34 @@ def build_content(check_mode=False):
 
         with open(BASE_DIR / page_name, "w", encoding="utf-8") as f:
             f.write(html)
+
+    # Synchronize header in static pages
+    print("Synchronizing header in static pages...")
+    static_page_nav_map = {
+        "index.html": "home",
+        "services.html": "services",
+        "project-management.html": "services",
+        "data-automation.html": "services",
+        "projects.html": "projects",
+        "contact.html": "contact",
+        "404.html": ""
+    }
+    header_regex = re.compile(r'<header class=["\']main-header["\']>.*?</header>', re.DOTALL)
+    for page_name, nav_active in static_page_nav_map.items():
+        page_path = BASE_DIR / page_name
+        if not page_path.exists():
+            continue
+        with open(page_path, "r", encoding="utf-8") as f:
+            content = f.read()
+
+        custom_header = header_html
+        if nav_active:
+            custom_header = custom_header.replace(f'class="nav-link" data-nav="{nav_active}"', f'class="nav-link active" data-nav="{nav_active}"')
+
+        if header_regex.search(content):
+            new_content = header_regex.sub(custom_header, content)
+            with open(page_path, "w", encoding="utf-8") as f:
+                f.write(new_content)
 
     # Generate sitemap.xml
     print("Generating sitemap.xml...")

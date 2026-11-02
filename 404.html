@@ -44,25 +44,101 @@
 
   <!-- Header -->
   <header class="main-header">
-    <div class="container nav-container">
-      <a href="index.html" class="brand">
-        <img src="assets/img/logo.png" alt="م. وائل محمد عراقي" class="brand-logo" height="44">
-        <div class="brand-text">
-          <span class="brand-name" data-i18n="brand_name">م. وائل محمد عراقي</span>
-          <span class="brand-title" data-i18n="brand_title">مهندس إدارة مشروعات ومكتب فني</span>
-        </div>
-      </a>
+  <div class="container nav-container">
+    <a href="index.html" class="brand">
+      <img src="assets/img/logo.png" alt="م. وائل محمد عراقي" class="brand-logo" height="44">
+      <div class="brand-text">
+        <span class="brand-name" data-i18n="brand_name">م. وائل محمد عراقي</span>
+        <span class="brand-title" data-i18n="brand_title">مهندس إدارة مشروعات ومكتب فني</span>
+      </div>
+    </a>
 
-      <nav aria-label="Main Navigation">
-        <ul class="nav-menu">
-          <li><a href="index.html" class="nav-link" data-i18n="nav_home">الرئيسية</a></li>
-          <li><a href="services.html" class="nav-link" data-i18n="nav_services">الخدمات والمسارات</a></li>
-          <li><a href="projects.html" class="nav-link" data-i18n="nav_projects">المشاريع</a></li>
-          <li><a href="contact.html" class="nav-link" data-i18n="nav_contact">تواصل معي</a></li>
-        </ul>
-      </nav>
+    <nav aria-label="Main Navigation">
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link" data-nav="home" data-i18n="nav_home">الرئيسية</a></li>
+        <li class="nav-dropdown">
+          <a href="services.html" class="nav-link" data-nav="services">
+            <span data-i18n="nav_work_areas">مجالات العمل</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </a>
+          <div class="dropdown-menu">
+            <a href="services.html" class="dropdown-item">
+              <span class="dropdown-item-title" data-i18n="nav_services">الخدمات والمسارات</span>
+              <span class="dropdown-item-desc">نظرة شاملة لكافة الخدمات الهندسية</span>
+            </a>
+            <a href="project-management.html" class="dropdown-item">
+              <span class="dropdown-item-title" data-i18n="nav_track_pm">إدارة وضبط المشروعات</span>
+              <span class="dropdown-item-desc" data-i18n="nav_track_pm_desc">ضبط التكاليف (EVM)، التخطيط (P6)، والمكتب الفني</span>
+            </a>
+            <a href="data-automation.html" class="dropdown-item">
+              <span class="dropdown-item-title" data-i18n="nav_track_data">تحليل البيانات والأتمتة</span>
+              <span class="dropdown-item-desc" data-i18n="nav_track_data_desc">لوحات Power BI، بايثون، وأتمتة n8n بالذكاء الاصطناعي</span>
+            </a>
+          </div>
+        </li>
+        <li><a href="projects.html" class="nav-link" data-nav="projects" data-i18n="nav_projects">المشاريع</a></li>
+        <li><a href="contact.html" class="nav-link" data-nav="contact" data-i18n="nav_contact">تواصل معي</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="https://wa.me/201019856727" target="_blank" rel="noopener" class="btn-icon btn-whatsapp" aria-label="WhatsApp">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+      </a>
+      <a href="mailto:waeleraqy9@gmail.com" class="btn-icon" aria-label="Email">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+      </a>
+      <a href="assets/cv/Wael_Mohamed_Eraqy_CV.pdf" target="_blank" rel="noopener" class="btn-cv">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+        <span data-i18n="nav_cv">تحميل الـ CV</span>
+      </a>
+      <button class="hamburger-btn" aria-label="Menu" aria-expanded="false">
+        <span class="hamburger-box">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </span>
+      </button>
     </div>
-  </header>
+  </div>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav">
+    <ul class="mobile-nav-list">
+      <li class="mobile-nav-item"><a href="index.html" class="mobile-nav-link" data-i18n="nav_home">الرئيسية</a></li>
+      <li class="mobile-nav-item">
+        <div class="mobile-nav-link" data-i18n="nav_work_areas">مجالات العمل</div>
+        <ul class="mobile-sub-list">
+          <li><a href="services.html" class="mobile-sub-link" data-i18n="nav_services">الخدمات والمسارات</a></li>
+          <li><a href="project-management.html" class="mobile-sub-link" data-i18n="nav_track_pm">إدارة وضبط المشروعات</a></li>
+          <li><a href="data-automation.html" class="mobile-sub-link" data-i18n="nav_track_data">تحليل البيانات والأتمتة</a></li>
+        </ul>
+      </li>
+      <li class="mobile-nav-item"><a href="projects.html" class="mobile-nav-link" data-i18n="nav_projects">المشاريع</a></li>
+      <li class="mobile-nav-item"><a href="contact.html" class="mobile-nav-link" data-i18n="nav_contact">تواصل معي</a></li>
+    </ul>
+
+    <div class="mobile-drawer-contact">
+      <div class="mobile-contact-title" data-i18n="mobile_quick_contact">تواصل سريع ومباشر</div>
+      <div class="mobile-contact-row">
+        <a href="https://wa.me/201019856727" target="_blank" rel="noopener" class="mobile-contact-circle btn-whatsapp" aria-label="WhatsApp">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+          <span>WhatsApp</span>
+        </a>
+        <a href="mailto:waeleraqy9@gmail.com" class="mobile-contact-circle" aria-label="Email">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          <span>Email</span>
+        </a>
+      </div>
+      <a href="assets/cv/Wael_Mohamed_Eraqy_CV.pdf" target="_blank" rel="noopener" class="btn btn-primary" style="width:100%; margin-top:0.6rem;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+        <span data-i18n="nav_cv">تحميل الـ CV</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+
 
   <!-- 404 Main Content -->
   <main class="container" style="padding: 6rem 1.5rem; text-align: center; max-width: 650px;">

@@ -26,6 +26,7 @@ const translations = {
     "nav_projects": "المشاريع",
     "nav_contact": "تواصل معي",
     "nav_cv": "تحميل الـ CV",
+    "mobile_quick_contact": "تواصل سريع ومباشر",
 
     // Hero
     "hero_pill": "مهندس مدني • خبرة 12+ عامًا • إدارة من مصر لمشروعات مصر والمملكة العربية السعودية",
@@ -207,6 +208,7 @@ const translations = {
     "nav_projects": "Projects",
     "nav_contact": "Contact",
     "nav_cv": "Download CV",
+    "mobile_quick_contact": "Quick Contact",
 
     // Hero
     "hero_pill": "Civil Engineer • 12+ Years Experience • Managing Egypt & KSA Mega Projects",
