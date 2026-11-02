@@ -241,6 +241,7 @@ button, input, select, textarea {
   max-width: 160px;
   object-fit: contain;
   vertical-align: middle;
+  border-radius: var(--radius-sm);
   flex-shrink: 0;
   transition: transform var(--transition-fast);
 }

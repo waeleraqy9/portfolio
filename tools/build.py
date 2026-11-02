@@ -44,6 +44,14 @@ def load_partial(name):
     with open(path, "r", encoding="utf-8") as f:
         return f.read()
 
+def get_logo_asset():
+    for ext in [".jpg", ".png", ".svg", ".webp", ".jpeg"]:
+        candidate = ASSETS_DIR / "img" / f"logo{ext}"
+        if candidate.exists():
+            mime = "image/svg+xml" if ext == ".svg" else ("image/png" if ext == ".png" else "image/jpeg")
+            return f"assets/img/logo{ext}", mime
+    return "assets/img/logo.jpg", "image/jpeg"
+
 def optimize_image(src_path, dst_path, max_width=1200, quality=80):
     os.makedirs(dst_path.parent, exist_ok=True)
     if dst_path.exists() and dst_path.stat().st_mtime >= src_path.stat().st_mtime:
@@ -68,19 +76,28 @@ def optimize_image(src_path, dst_path, max_width=1200, quality=80):
 
 def build_content(check_mode=False):
     blocklist = load_blocklist()
+    logo_path, logo_mime = get_logo_asset()
+    print(f"Detected active logo: {logo_path} ({logo_mime})")
+
     announcement_html = load_partial("announcement")
     header_html = load_partial("header")
+    header_html = re.sub(r'src=["\']assets/img/logo\.[a-zA-Z]+["\']', f'src="{logo_path}"', header_html)
+
     contact_block_html = load_partial("contact-block")
     footer_html = load_partial("footer")
+
+    favicon_tag = f'<link rel="icon" type="{logo_mime}" href="{logo_path}">'
 
     project_template = ""
     case_study_template = ""
     if (TEMPLATES_DIR / "project.html").exists():
         with open(TEMPLATES_DIR / "project.html", "r", encoding="utf-8") as f:
             project_template = f.read()
+            project_template = re.sub(r'<link\s+rel=["\']icon["\'][^>]*>', favicon_tag, project_template)
     if (TEMPLATES_DIR / "case-study.html").exists():
         with open(TEMPLATES_DIR / "case-study.html", "r", encoding="utf-8") as f:
             case_study_template = f.read()
+            case_study_template = re.sub(r'<link\s+rel=["\']icon["\'][^>]*>', favicon_tag, case_study_template)
 
     projects = []
     case_studies = []
@@ -443,8 +460,8 @@ def build_content(check_mode=False):
         with open(BASE_DIR / page_name, "w", encoding="utf-8") as f:
             f.write(html)
 
-    # Synchronize header and announcement bar in static pages
-    print("Synchronizing header and announcement bar in static pages...")
+    # Synchronize header, announcement bar, and favicon in static pages
+    print("Synchronizing header, announcement bar, and favicon in static pages...")
     static_page_nav_map = {
         "index.html": "home",
         "services.html": "services",
@@ -456,6 +473,8 @@ def build_content(check_mode=False):
     }
     header_regex = re.compile(r'<header class=["\']main-header["\']>.*?</header>', re.DOTALL)
     announcement_regex = re.compile(r'<div class=["\']announcement-bar["\']>.*?</div>\s*(?=(?:<!--.*?-->\s*)?<header)', re.DOTALL)
+    favicon_regex = re.compile(r'<link\s+rel=["\']icon["\'][^>]*>', re.IGNORECASE)
+
     for page_name, nav_active in static_page_nav_map.items():
         page_path = BASE_DIR / page_name
         if not page_path.exists():
@@ -472,6 +491,9 @@ def build_content(check_mode=False):
 
         if announcement_regex.search(content):
             content = announcement_regex.sub(announcement_html + "\n\n  ", content)
+
+        if favicon_regex.search(content):
+            content = favicon_regex.sub(favicon_tag, content)
 
         with open(page_path, "w", encoding="utf-8") as f:
             f.write(content)
