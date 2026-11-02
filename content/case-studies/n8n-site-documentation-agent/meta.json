@@ -1,0 +1,35 @@
+{
+  "status": "published",
+  "order": 2,
+  "tab": "automation",
+  "title": {
+    "ar": "أتمتة توثيق المواقع اليومية عبر n8n ونماذج الذكاء الاصطناعي",
+    "en": "AI-Powered Automated Daily Site Documentation Workflow (n8n)"
+  },
+  "summary": {
+    "ar": "أتمتة استخراج وتصنيف التحديثات الميدانية من غرف المحادثات مع مرحلة اعتماد بشري (HITL).",
+    "en": "Automated text extraction and classification of field updates with Human-in-the-Loop approval."
+  },
+  "cover": "cover.jpg",
+  "tools": ["n8n", "Python", "AI Agents"],
+  "problem": {
+    "ar": "ضياع التحديثات اليومية والصور الميدانية في غرف الدردشة وصعوبة ربطها بأكواد التكاليف (CA-Codes).",
+    "en": "Field site updates lost in chat threads with inconsistent cost-code (CA-Code) tracking."
+  },
+  "solution": {
+    "ar": "بناء سير عمل ذكي عبر n8n يصنف بنود الأعمال ويرسل إشعار اعتماد لمهندس التخطيط بضغطة زر.",
+    "en": "Developed an n8n workflow that parses work items and prompts engineers for one-click verification."
+  },
+  "impact": {
+    "ar": "توثيق يومي منتظم وتحديث فوري لقاعدة البيانات دون إدخال يدوي مكرر.",
+    "en": "Consistent site logging and automatic database synchronization without redundant manual entry."
+  },
+  "deliverables": [
+    {
+      "type": "workflow",
+      "platform": "n8n",
+      "title": { "ar": "مخطط مسار الأتمتة الميدانية", "en": "Automated Site Workflow Architecture" },
+      "images": ["cover.jpg"]
+    }
+  ]
+}

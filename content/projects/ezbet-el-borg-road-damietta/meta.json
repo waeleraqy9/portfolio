@@ -1,0 +1,64 @@
+{
+  "status": "published",
+  "order": 1,
+  "country": "egypt",
+  "country_name": {
+    "ar": "مصر",
+    "en": "Egypt"
+  },
+  "city": {
+    "ar": "دمياط",
+    "en": "Damietta"
+  },
+  "title": {
+    "ar": "مشروع طريق عزبة البرج والطريق الخرساني بدمياط",
+    "en": "Ezbet El Borg Road and Concrete Road Project, Damietta"
+  },
+  "summary": {
+    "ar": "تنفيذ وإحلال طبقات الرصف لطريق عزبة البرج وربطه بالطريق الخرساني المؤدي لميناء دمياط.",
+    "en": "Execution and paving layers replacement for Ezbet El Borg Road connected to Damietta Port concrete road."
+  },
+  "cover": "cover.jpg",
+  "my_role": {
+    "ar": "مهندس تنفيذ",
+    "en": "Execution Engineer"
+  },
+  "parties": [
+    {
+      "role": "owner",
+      "name": {
+        "ar": "الوحدة المحلية لمدينة ومركز دمياط",
+        "en": "Damietta City and Markaz Local Unit"
+      }
+    },
+    {
+      "role": "contractor",
+      "name": {
+        "ar": "شركة النيل لإنشاء الطرق",
+        "en": "Nile Roads Construction Company"
+      }
+    }
+  ],
+  "details": [
+    {
+      "label": { "ar": "طول الطريق", "en": "Road Length" },
+      "value": { "ar": "10 كم", "en": "10 km" }
+    },
+    {
+      "label": { "ar": "عرض الطريق", "en": "Road Width" },
+      "value": { "ar": "9 م", "en": "9 m" }
+    }
+  ],
+  "scope": {
+    "ar": [
+      "الإشراف الميداني على طبقات التأسيس والسن والرصف.",
+      "توجيه ومتابعة مقاولي الباطن وضبط الجودة.",
+      "إدارة حركة المعدات الثقيلة وأطقم العمل الميدانية."
+    ],
+    "en": [
+      "Field supervision of base, crushed-stone, and asphalt layers.",
+      "Subcontractor management and quality control.",
+      "Heavy equipment coordination and site crew management."
+    ]
+  }
+}

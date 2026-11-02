@@ -1,0 +1,72 @@
+{
+  "status": "published",
+  "order": 7,
+  "country": "egypt",
+  "country_name": {
+    "ar": "مصر",
+    "en": "Egypt"
+  },
+  "city": {
+    "ar": "العلمين الجديدة",
+    "en": "New Alamein City"
+  },
+  "title": {
+    "ar": "مشروع 4 عمارات سكنية بمدينة العلمين الجديدة",
+    "en": "Four Residential Buildings, New Alamein City"
+  },
+  "summary": {
+    "ar": "تنفيذ وإدارة المكتب الفني لـ 4 عمارات سكنية متكاملة والشبكات الخارجية بالعلمين الجديدة.",
+    "en": "Execution and technical office management for 4 residential buildings and external networks in New Alamein."
+  },
+  "cover": "cover.jpg",
+  "my_role": {
+    "ar": "مهندس إدارة مشروعات ومكتب فني",
+    "en": "Project Controls & Technical Office Engineer"
+  },
+  "parties": [
+    {
+      "role": "owner_consultant",
+      "name": {
+        "ar": "شركة وادي النيل",
+        "en": "Wadi El Nile Company"
+      }
+    },
+    {
+      "role": "contractor",
+      "name": {
+        "ar": "شركة دليل الهدى",
+        "en": "Dalel El Hoda Company"
+      }
+    }
+  ],
+  "details": [
+    {
+      "label": { "ar": "عدد المباني", "en": "Number of Buildings" },
+      "value": {
+        "ar": "4 عمارات سكنية",
+        "en": "4 Residential Buildings"
+      }
+    },
+    {
+      "label": { "ar": "موقع المشروع", "en": "Location" },
+      "value": {
+        "ar": "المدينة الشاطئية - العلمين الجديدة",
+        "en": "Coastal City - New Alamein"
+      }
+    }
+  ],
+  "scope": {
+    "ar": [
+      "إعداد واعتماد المخططات التنفيذية (Shop Drawings) للأعمال الخرسانية والمعمارية.",
+      "متابعة إعداد ميزانية الصفر والتحكم في التدفقات النقدية لبنود التنفيذ.",
+      "حصر الكميات المنفذة بالمطابقة التعاقدية وإعداد المستخلصات الدورية.",
+      "إعداد مخططات As-Built وإنهاء متطلبات الاستلام والتسليم للمشروع."
+    ],
+    "en": [
+      "Preparing and securing approvals for structural and architectural shop drawings.",
+      "Budget Zero execution tracking and project cash-flow control.",
+      "Contractual quantity surveying and periodic progress billing management.",
+      "Generating As-Built drawings and leading final project handover packages."
+    ]
+  }
+}

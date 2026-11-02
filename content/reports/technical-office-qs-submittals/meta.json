@@ -1,0 +1,15 @@
+{
+  "status": "published",
+  "order": 3,
+  "tab": "technical-office",
+  "title": {
+    "ar": "حزمة حصر الكميات والمطابقات التنفيذية (Shop Drawings & As-Built)",
+    "en": "Quantity Surveying Package & Shop Drawings Coordination"
+  },
+  "insight": {
+    "ar": "تدقيق الفروق التعاقدية بين المخططات والواقع الميداني وضمان دقة المستخلصات الختامية.",
+    "en": "Verifying contractual quantity variances and ensuring accuracy for final payment certificates."
+  },
+  "tools": ["AutoCAD", "MS Excel"],
+  "pages": ["01.jpg"]
+}

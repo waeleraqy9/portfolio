@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://waeleraqy9.github.io/Final-Portofolio/sitemap.xml

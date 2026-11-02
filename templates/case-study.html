@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{title_ar}} | دراسة حالة | م. وائل محمد عراقي</title>
+  <meta name="description" content="{{summary_ar}}">
+  <link rel="icon" type="image/png" href="assets/img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  {{announcement}}
+
+  <!-- Header -->
+  {{header}}
+
+  <!-- Main Content -->
+  <main class="container" style="padding-top: 2rem; padding-bottom: 4rem;">
+    <div class="detail-header">
+      <a href="data-automation.html" class="detail-back-link">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        <span>العودة لمسار تحليل البيانات والأتمتة</span>
+      </a>
+      <div style="display:flex; align-items:center; gap:0.75rem; margin-top:0.5rem; margin-bottom:0.75rem;">
+        <span class="status-badge" style="background:rgba(16,185,129,0.1); color:#34d399; border-color:rgba(16,185,129,0.25);">
+          دراسة حالة تطبيقية
+        </span>
+      </div>
+      <h1 class="hero-title" style="font-size: 2.25rem; margin-bottom: 1rem;">{{title}}</h1>
+      <p class="hero-lead" style="max-width: 850px;">{{summary}}</p>
+    </div>
+
+    <!-- Cover Image -->
+    <div style="margin: 2rem 0; border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border-color); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.4);">
+      <img src="{{cover_image}}" alt="{{title}}" style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover;">
+    </div>
+
+    <div class="detail-layout">
+      <!-- Main Content Column -->
+      <div style="display: flex; flex-direction: column; gap: 2.5rem;">
+        <!-- Problem & Solution -->
+        <div class="about-card">
+          <h2 style="font-size: 1.25rem; font-weight: 700; color: #fb7185; margin-bottom: 0.5rem;">التحدي والمشكلة الهندسية</h2>
+          <p class="about-card-text">{{problem}}</p>
+        </div>
+
+        <div class="about-card">
+          <h2 style="font-size: 1.25rem; font-weight: 700; color: #34d399; margin-bottom: 0.5rem;">الحل التقني والتنفيذ</h2>
+          <p class="about-card-text">{{solution}}</p>
+        </div>
+
+        {{impact_block}}
+
+        <!-- Deliverables -->
+        {{deliverables_block}}
+      </div>
+
+      <!-- Facts Column -->
+      <aside>
+        <div class="facts-card">
+          <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--accent-primary-hover);">الأدوات والمنظومات المستخدمة</h3>
+          <div class="chips-list" style="margin-top: 0.5rem;">
+            {{tools_chips}}
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Contact Block -->
+  {{contact_block}}
+
+  <!-- Footer -->
+  {{footer}}
+
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

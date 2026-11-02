@@ -1,0 +1,14 @@
+# Never commit or publish
+_source/
+HANDOFF.md
+ADD-CONTENT.md
+TASKS.md
+START-HERE.md
+SPEC-*.md
+content/blocklist.txt
+
+# OS and tools
+.DS_Store
+Thumbs.db
+__pycache__/
+*.pyc

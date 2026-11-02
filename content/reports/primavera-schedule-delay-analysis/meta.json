@@ -1,0 +1,15 @@
+{
+  "status": "published",
+  "order": 1,
+  "tab": "planning",
+  "title": {
+    "ar": "تقرير خط الأساس وتحليل التأخيرات الزمنية (Time Impact Analysis)",
+    "en": "Baseline Schedule & Time Impact Delay Analysis Report"
+  },
+  "insight": {
+    "ar": "تحليل المسار الحرج ورصد فترات السماحية ودعم مطالبات تمديد المدة (EOT) وتفادي الغرامات.",
+    "en": "Critical path analysis, float monitoring, and supporting Extension of Time (EOT) claims."
+  },
+  "tools": ["Primavera P6", "MS Excel"],
+  "pages": ["01.jpg"]
+}

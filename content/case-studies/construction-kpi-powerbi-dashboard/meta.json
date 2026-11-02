@@ -1,0 +1,35 @@
+{
+  "status": "published",
+  "order": 1,
+  "tab": "data-analysis",
+  "title": {
+    "ar": "لوحة مؤشرات الأداء الشاملة لمواقع الإنشاءات (Power BI)",
+    "en": "Executive Construction KPI & Resource Dashboard (Power BI)"
+  },
+  "summary": {
+    "ar": "بناء مستودع بيانات ونموذج Star-Schema يربط جداول الكميات بالمستخلصات والمخازن لدعم القرار.",
+    "en": "Building a data model and Star-Schema linking BOQs, invoicing, and inventory for decision support."
+  },
+  "cover": "cover.jpg",
+  "tools": ["Power BI", "SQL Server", "DAX"],
+  "problem": {
+    "ar": "تشتت بيانات المشاريع بين ملفات إكسل متعددة وتأخر إصدار تقارير الإنتاجية الشهرية للإدارة العليا.",
+    "en": "Fragmented site data across disparate spreadsheets causing reporting delays for executive management."
+  },
+  "solution": {
+    "ar": "إنشاء نموذج بيانات موحد بقواعد بيانات SQL مع مقاييس DAX متقدمة ولوحات تفاعلية لحظية.",
+    "en": "Built a unified SQL data warehouse with custom DAX metrics and real-time interactive dashboards."
+  },
+  "impact": {
+    "ar": "تسريع دورة إعداد التقارير بنسبة 80% وتحديد انحرافات استهلاك المواد بشكل فوري.",
+    "en": "Reduced reporting cycle time by 80% with instantaneous detection of material consumption variances."
+  },
+  "deliverables": [
+    {
+      "type": "dashboard",
+      "platform": "powerbi",
+      "title": { "ar": "لوحة متابعة تقدم الأعمال والموارد", "en": "Progress & Resource Monitoring Dashboard" },
+      "images": ["cover.jpg"]
+    }
+  ]
+}

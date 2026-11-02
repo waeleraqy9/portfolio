@@ -1,0 +1,73 @@
+{
+  "status": "published",
+  "order": 2,
+  "country": "egypt",
+  "country_name": {
+    "ar": "مصر",
+    "en": "Egypt"
+  },
+  "city": {
+    "ar": "الغردقة",
+    "en": "Hurghada"
+  },
+  "title": {
+    "ar": "فندق تيبا روز السياحي بالغردقة",
+    "en": "Tiba Rose Hotel, Hurghada"
+  },
+  "summary": {
+    "ar": "إنشاء وتشطيب فندق تيبا روز السياحي والأعمال المدنية والمعمارية واللاندسكيب.",
+    "en": "Construction and finishing of Tiba Rose Hotel including civil, architectural, and landscape works."
+  },
+  "cover": "cover.jpg",
+  "my_role": {
+    "ar": "مهندس تنفيذ ومكتب فني",
+    "en": "Execution and Technical Office Engineer"
+  },
+  "parties": [
+    {
+      "role": "owner_consultant",
+      "name": {
+        "ar": "الدفاع الجوي",
+        "en": "Air Defense Forces"
+      }
+    },
+    {
+      "role": "main_contractor",
+      "name": {
+        "ar": "شركة الاعتماد",
+        "en": "Al Etimad Company"
+      }
+    }
+  ],
+  "details": [
+    {
+      "label": { "ar": "مساحة المبنى الرئيسي", "en": "Main Building Area" },
+      "value": { "ar": "600 م²", "en": "600 m²" }
+    },
+    {
+      "label": { "ar": "مساحة اللاندسكيب", "en": "Landscape Area" },
+      "value": { "ar": "500 م²", "en": "500 m²" }
+    },
+    {
+      "label": { "ar": "تقسيم الأدوار", "en": "Floor Distribution" },
+      "value": {
+        "ar": "بدروم، أرضي، 30 غرفة فندقية، 10 شقق فندقية، جناح VIP، ورووف",
+        "en": "Basement, Ground, 30 Hotel Rooms, 10 Hotel Apartments, VIP Suite, and Roof"
+      }
+    }
+  ],
+  "scope": {
+    "ar": [
+      "الإشراف على تنفيذ الأعمال الإنشائية والتشطيبات المعمارية المتكاملة.",
+      "إعداد وتدقيق المخططات التنفيذية (Shop Drawings) وحصر الكميات.",
+      "متابعة أعمال اللاندسكيب والموقع العام وتنسيق المسارات الخدمية.",
+      "التنسيق المباشر مع جهة الإشراف لضمان مطابقة معايير الجودة."
+    ],
+    "en": [
+      "Supervising structural execution and integrated architectural finishing works.",
+      "Preparing and reviewing shop drawings and quantity surveying.",
+      "Managing landscape works, site development, and service routing.",
+      "Direct technical coordination with the supervising authority."
+    ]
+  }
+}

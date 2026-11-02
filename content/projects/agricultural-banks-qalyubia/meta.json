@@ -1,0 +1,86 @@
+{
+  "status": "published",
+  "order": 5,
+  "country": "egypt",
+  "country_name": {
+    "ar": "مصر",
+    "en": "Egypt"
+  },
+  "city": {
+    "ar": "القليوبية",
+    "en": "Qalyubia"
+  },
+  "title": {
+    "ar": "البنوك الزراعية",
+    "en": "Agricultural Banks"
+  },
+  "summary": {
+    "ar": "تطوير ورفع كفاءة مقرات البنوك الزراعية والتشطيبات والأنظمة المصرفية المؤمنة.",
+    "en": "Renovation and upgrading of agricultural bank branches with secured banking systems and finishes."
+  },
+  "cover": "cover.jpg",
+  "my_role": {
+    "ar": "مهندس مكتب فني وتخطيط",
+    "en": "Technical Office & Planning Engineer"
+  },
+  "parties": [
+    {
+      "role": "owner",
+      "name": {
+        "ar": "إدارة البنوك الزراعية",
+        "en": "Agricultural Banks Administration"
+      }
+    },
+    {
+      "role": "main_contractor",
+      "name": {
+        "ar": "الهيئة العربية للتصنيع",
+        "en": "Arab Organization for Industrialization (AOI)"
+      }
+    },
+    {
+      "role": "subcontractor",
+      "name": {
+        "ar": "شركة دليل الهدى",
+        "en": "Dalel El Hoda Company"
+      }
+    },
+    {
+      "role": "consultant",
+      "name": {
+        "ar": "مكتب الخطيب",
+        "en": "Al-Khatib Consulting Office"
+      }
+    },
+    {
+      "role": "contractor_consultant",
+      "name": {
+        "ar": "مركز الدراسات التخطيطية والمعمارية (CAPS)",
+        "en": "Center for Planning and Architectural Studies (CAPS)"
+      }
+    }
+  ],
+  "details": [
+    {
+      "label": { "ar": "نوع المشروع", "en": "Project Type" },
+      "value": {
+        "ar": "تطوير منشآت مصرفية وإدارية",
+        "en": "Banking and Administrative Facilities Renovation"
+      }
+    }
+  ],
+  "scope": {
+    "ar": [
+      "إعداد وحصر المقايسات التفصيلية لكافة أعمال الإحلال والتجديد.",
+      "متابعة اعتماد العينات الفنية والمواد المعمارية والأنظمة الأمنية.",
+      "إعداد الجداول الزمنية لمراحل تسليم الفروع والمتابعة الميدانية للتقدم.",
+      "تدقيق وإعداد المستخلصات الدورية لمقاولي الباطن والجهة المالكة."
+    ],
+    "en": [
+      "Comprehensive quantity surveying and BOQ preparation for renovation works.",
+      "Managing technical submittals for architectural materials and security systems.",
+      "Branch rollout schedule planning and tracking milestones.",
+      "Reviewing and preparing periodic interim payment certificates."
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "status": "published",
+  "order": 2,
+  "tab": "cost-control",
+  "title": {
+    "ar": "تقرير حوكمة التكاليف وتحليل مؤشرات القيمة المكتسبة (EVM)",
+    "en": "Cost Governance & Earned Value Management (EVM) Variance Report"
+  },
+  "insight": {
+    "ar": "رصد مؤشرات الأداء المالي (CPI/SPI) وتقدير التكلفة الإجمالية عند النهاية (EAC) لحماية هامش الربح.",
+    "en": "Tracking cost/schedule performance indices (CPI/SPI) and forecasting EAC to secure profit margins."
+  },
+  "tools": ["MS Excel", "Power BI"],
+  "pages": ["01.jpg", "02.jpg"]
+}

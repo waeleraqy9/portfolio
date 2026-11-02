@@ -1,0 +1,72 @@
+{
+  "status": "published",
+  "order": 4,
+  "country": "saudi",
+  "country_name": {
+    "ar": "المملكة العربية السعودية",
+    "en": "Saudi Arabia"
+  },
+  "city": {
+    "ar": "الرياض",
+    "en": "Riyadh"
+  },
+  "title": {
+    "ar": "مستشفى الملك سلمان",
+    "en": "King Salman Hospital"
+  },
+  "summary": {
+    "ar": "تطوير إنشائي ومعماري متخصص لأقسام الرعاية الطبية ووحدة العلاج الإشعاعي.",
+    "en": "Specialized structural and architectural development for medical care departments and radiation therapy unit."
+  },
+  "cover": "cover.jpg",
+  "my_role": {
+    "ar": "مهندس إدارة مشروعات ومكتب فني",
+    "en": "Project Controls & Technical Office Engineer"
+  },
+  "parties": [
+    {
+      "role": "owner",
+      "name": {
+        "ar": "مؤسسة الملك سلمان / الفيصلية",
+        "en": "King Salman Foundation / Al Faisaliah"
+      }
+    },
+    {
+      "role": "contractor",
+      "name": {
+        "ar": "إنوفيرجنت",
+        "en": "Innovergent"
+      }
+    }
+  ],
+  "details": [
+    {
+      "label": { "ar": "نوع المنشأة", "en": "Facility Type" },
+      "value": {
+        "ar": "مركز أورام ورعاية طبية تخصصية",
+        "en": "Specialized Oncology and Healthcare Center"
+      }
+    },
+    {
+      "label": { "ar": "الأعمال التخصصية", "en": "Specialized Works" },
+      "value": {
+        "ar": "وحدة البنكر الخرساني للعلاج الإشعاعي (Radiation Bunker)",
+        "en": "Radiation Therapy Concrete Bunker Unit"
+      }
+    }
+  ],
+  "scope": {
+    "ar": [
+      "تخطيط ومتابعة البرامج الزمنية الدقيقة لمسارات العمل الطبية الحساسة.",
+      "تدقيق رسومات الشوب دروينج للخرسانة الكثيفة ومسارات التدريع الإشعاعي.",
+      "مراجعة واعتماد المخططات التنفيذية لشبكات التغذية الكهروميكانيكية والغازات الطبية.",
+      "إعداد حصر الكميات والمطابقة مع المتطلبات والمعايير الصحية المعتمدة."
+    ],
+    "en": [
+      "Planning and scheduling specialized medical facility construction sequences.",
+      "Reviewing shop drawings for heavyweight concrete and radiation shielding paths.",
+      "Coordinating electromechanical and medical gas infrastructure shop drawings.",
+      "Quantity surveying and strict compliance verification with healthcare standards."
+    ]
+  }
+}

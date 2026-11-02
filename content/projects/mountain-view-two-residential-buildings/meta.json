@@ -1,0 +1,65 @@
+{
+  "status": "published",
+  "order": 6,
+  "country": "egypt",
+  "country_name": {
+    "ar": "مصر",
+    "en": "Egypt"
+  },
+  "city": {
+    "ar": "القاهرة الجديدة",
+    "en": "New Cairo"
+  },
+  "title": {
+    "ar": "مشروع عمارتين ماونتن فيو السكنية",
+    "en": "Two Residential Buildings, Mountain View"
+  },
+  "summary": {
+    "ar": "إدارة وضبط الدورة الهندسية والتنفيذية لعمارتين سكنيتين بمواصفات الإسكان الفاخر.",
+    "en": "Engineering management and project controls for two luxury residential buildings."
+  },
+  "cover": "cover.jpg",
+  "my_role": {
+    "ar": "مهندس تخطيط وتحكم تكاليف",
+    "en": "Planning & Cost Control Engineer"
+  },
+  "parties": [
+    {
+      "role": "owner_consultant",
+      "name": {
+        "ar": "ماونتن فيو",
+        "en": "Mountain View"
+      }
+    },
+    {
+      "role": "contractor",
+      "name": {
+        "ar": "شركة دليل الهدى",
+        "en": "Dalel El Hoda Company"
+      }
+    }
+  ],
+  "details": [
+    {
+      "label": { "ar": "نوع المنشأة", "en": "Facility Type" },
+      "value": {
+        "ar": "عمائر سكنية فاخرة (كمبوند)",
+        "en": "Luxury Compound Residential Buildings"
+      }
+    }
+  ],
+  "scope": {
+    "ar": [
+      "بناء ورقة الربط (Mapping Sheet) وتفكيك بنود المقايسة لربطها بالجدول الزمني.",
+      "تأسيس ومتابعة خط الأساس (Baseline) عبر Primavera P6 وتحديث المسار الحرج.",
+      "حوكمة التكاليف ورصد معدلات استهلاك المواد والهوالك ومقارنتها بالمخطط.",
+      "مراجعة مستخلصات مقاولي الباطن والاعتمادات المستندية للمشروع."
+    ],
+    "en": [
+      "Developing the Mapping Sheet linking BOQ items directly to WBS and schedule.",
+      "Primavera P6 baseline management, critical path tracking, and updates.",
+      "Cost governance, material wastage monitoring, and variance tracking.",
+      "Subcontractor payment certificates verification and technical submittals."
+    ]
+  }
+}

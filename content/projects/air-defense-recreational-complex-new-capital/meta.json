@@ -1,0 +1,72 @@
+{
+  "status": "published",
+  "order": 3,
+  "country": "egypt",
+  "country_name": {
+    "ar": "مصر",
+    "en": "Egypt"
+  },
+  "city": {
+    "ar": "العاصمة الإدارية الجديدة",
+    "en": "New Administrative Capital"
+  },
+  "title": {
+    "ar": "مجمع الدفاع الجوي والترفيهي بالعاصمة الإدارية الجديدة",
+    "en": "Air Defense Recreational Complex, New Administrative Capital"
+  },
+  "summary": {
+    "ar": "مجمع ترفيهي متكامل يضم مبنى الجيم، نادي الفروسية والإسطبلات، والمبنى الفندقي.",
+    "en": "Integrated recreational complex featuring gym facility, equestrian club and stables, and hotel building."
+  },
+  "cover": "cover.jpg",
+  "my_role": {
+    "ar": "مهندس تنفيذ ومكتب فني",
+    "en": "Execution and Technical Office Engineer"
+  },
+  "parties": [
+    {
+      "role": "owner",
+      "name": {
+        "ar": "الدفاع الجوي",
+        "en": "Air Defense Forces"
+      }
+    },
+    {
+      "role": "consultant",
+      "name": {
+        "ar": "صبور ووليد ديزاين، بافليون",
+        "en": "Sabour & Walid Design, Pavilion"
+      }
+    },
+    {
+      "role": "contractor",
+      "name": {
+        "ar": "ديتاك",
+        "en": "DETAC"
+      }
+    }
+  ],
+  "details": [
+    {
+      "label": { "ar": "المباني المسندة", "en": "Assigned Buildings" },
+      "value": {
+        "ar": "مبنى الجيم، مبنى ونادي الفروسية، والمبنى الفندقي",
+        "en": "Gym Building, Equestrian Club, and Hotel Building"
+      }
+    }
+  ],
+  "scope": {
+    "ar": [
+      "إدارة أعمال المكتب الفني لمبنى الفروسية والإسطبلات ومبنى الجيم.",
+      "متابعة وتنفيذ التشطيبات الخاصة بالرخام والاستانلس ستيل للمبنى الفندقي.",
+      "إعداد وحصر الكميات وتدقيق المخططات التنفيذية واعتمادات المواد.",
+      "التنسيق الدوري وحل التعارضات الهندسية مع مكاتب الاستشاريين (صبور وبافليون)."
+    ],
+    "en": [
+      "Managing technical office operations for the equestrian facility and gym building.",
+      "Supervising specialized marble and stainless steel architectural hotel finishes.",
+      "Quantity surveying, shop drawings preparation, and material submittals.",
+      "Coordinating technical approvals and resolving clashes with consultants."
+    ]
+  }
+}
